@@ -25,7 +25,7 @@ $ helm install --name my-release .
 To uninstall `my-release`:
 
 ```bash
-$ helm install --name my-release .
+$ helm delete my-release
 ```
 
 ## Configuration
