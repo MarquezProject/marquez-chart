@@ -30,7 +30,7 @@ $ helm delete my-release
 
 ## Configuration
 
-[Marquez](https://github.com/MarquezProject/marquez) **parameters**
+### [Marquez](https://github.com/MarquezProject/marquez) **parameters**
 
 | Parameter                  | Description                      | Default                  |
 |----------------------------|----------------------------------|--------------------------|
@@ -45,7 +45,7 @@ $ helm delete my-release
 | `marquez.db.user`          | PostgreSQL user                  | `buendia`                |
 | `marquez.db.password`      | PostgreSQL password              | `macondo `               |
 
-[Marquez Web UI](https://github.com/MarquezProject/marquez-web) **parameters**
+### [Marquez Web UI](https://github.com/MarquezProject/marquez-web) **parameters**
 
 | Parameter              | Description              | Default        |
 |------------------------|--------------------------|----------------|
