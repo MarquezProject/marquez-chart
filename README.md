@@ -53,3 +53,7 @@ $ helm delete my-release
 | `web.image.repository` | Marquez Web UI image     | `marquez-web`  |
 | `web.image.tag`        | Marquez Web UI image tag | `0.3.0`        |
 | `web.image.pullPolicy` | Image pull policy        | `IfNotPresent` |
+
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/MarquezProject/marquez-chart/blob/master/CONTRIBUTING.md) for more details about how to contribute.
