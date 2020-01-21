@@ -38,6 +38,7 @@ $ helm delete my-release
 | `marquez.image.repository` | Marquez image                    | `marquez`      |
 | `marquez.image.tag`        | Marquez image tag                | `0.10.0`       |
 | `marquez.image.pullPolicy` | Image pull policy                | `IfNotPresent` |
+| `marquez.replicaCount`     | Number of desired replicas       | `1`            |
 | `marquez.db.enabled`       | Create a PostgreSQL database     | `false`        |
 | `marquez.db.host`          | PostgreSQL host                  | `nil`          |
 | `marquez.db.port`          | PostgreSQL port                  | `5432`         |
@@ -52,6 +53,7 @@ $ helm delete my-release
 | `web.image.repository` | Marquez Web UI image          | `marquez-web`  |
 | `web.image.tag`        | Marquez Web UI image tag      | `0.3.0`.       |
 | `web.image.pullPolicy` | Image pull policy             | `IfNotPresent` |
+| `web.replicaCount`     | Number of desired replicas    | `1`            |
 
 ## Contributing
 
