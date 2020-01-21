@@ -1,32 +1,35 @@
 # Marquez [Helm Chart](https://helm.sh)
 
-[![status](https://img.shields.io/badge/status-WIP-yellow.svg)](#status)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marquez-project/community)
 [![license](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://raw.githubusercontent.com/MarquezProject/marquez-chart/master/LICENSE)
 
 Helm Chart for [Marquez](https://github.com/MarquezProject/marquez).
 
-## Status
+## TL;DR;
 
-This chart is under active development at [WeWork](https://www.wework.com). 
+```bash
+$ helm install .
+```
 
 ## Installing
 
-To install the chart with release `my-release`:
+To install the chart with the release name `my-release`:
 
 ```bash
 $ helm install --name my-release .
 ```
 
-> 
+> **Note:** For a list of parameters that can be overridden during installation, see the [configuration](#configuration) section.
 
 ## Uninstalling
 
-To uninstall `my-release`:
+To uninstall the `my-release` deployment:
 
 ```bash
 $ helm delete my-release
 ```
+
+The command removes all the Kubernetes components associated with the chart and deletes the release.
 
 ## Configuration
 
@@ -36,7 +39,7 @@ $ helm delete my-release
 |----------------------------|----------------------------------|--------------------------|
 | `marquez.image.registry`   | Marquez image registry           | `docker.io`              |
 | `marquez.image.repository` | Marquez image                    | `marquezproject/marquez` |
-| `marquez.image.tag`        | Marquez image tag                | `0.10.2`                 |
+| `marquez.image.tag`        | Marquez image tag                | `0.10.0`                 |
 | `marquez.image.pullPolicy` | Image pull policy                | `IfNotPresent`           |
 | `marquez.db.enabled`       | Create a PostgreSQL database     | `false`                  |
 | `marquez.db.host`          | PostgreSQL host                  | `nil`                    |
