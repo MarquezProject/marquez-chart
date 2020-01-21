@@ -48,11 +48,12 @@ $ helm delete my-release
 
 ### [Marquez Web UI](https://github.com/MarquezProject/marquez-web) **parameters**
 
-| Parameter              | Description              | Default        |
-|------------------------|--------------------------|----------------|
-| `web.image.repository` | Marquez Web UI image     | `marquez-web`  |
-| `web.image.tag`        | Marquez Web UI image tag | `0.3.0`        |
-| `web.image.pullPolicy` | Image pull policy        | `IfNotPresent` |
+| Parameter              | Description                   | Default                      |
+|------------------------|-------------------------------|------------------------------|
+| `web.image.registry`   | Marquez Web UI image registry | `docker.io`                  |
+| `web.image.repository` | Marquez Web UI image          | `marquezproject/marquez-web` |
+| `web.image.tag`        | Marquez Web UI image tag      | `0.3.0`                      |
+| `web.image.pullPolicy` | Image pull policy             | `IfNotPresent`               |
 
 ## Contributing
 
