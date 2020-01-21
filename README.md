@@ -11,7 +11,7 @@ Helm Chart for [Marquez](https://github.com/MarquezProject/marquez).
 $ helm install .
 ```
 
-## Installing
+## Installing the Chart
 
 To install the chart with the release name `my-release`:
 
@@ -21,15 +21,13 @@ $ helm install --name my-release .
 
 > **Note:** For a list of parameters that can be overridden during installation, see the [configuration](#configuration) section.
 
-## Uninstalling
+## Uninstalling the Chart
 
 To uninstall the `my-release` deployment:
 
 ```bash
 $ helm delete my-release
 ```
-
-The command removes all the Kubernetes components associated with the chart and deletes the release.
 
 ## Configuration
 
