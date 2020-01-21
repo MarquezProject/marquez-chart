@@ -33,27 +33,25 @@ $ helm delete my-release
 
 ### [Marquez](https://github.com/MarquezProject/marquez) **parameters**
 
-| Parameter                  | Description                      | Default                  |
-|----------------------------|----------------------------------|--------------------------|
-| `marquez.image.registry`   | Marquez image registry           | `docker.io`              |
-| `marquez.image.repository` | Marquez image                    | `marquezproject/marquez` |
-| `marquez.image.tag`        | Marquez image tag                | `0.10.0`                 |
-| `marquez.image.pullPolicy` | Image pull policy                | `IfNotPresent`           |
-| `marquez.db.enabled`       | Create a PostgreSQL database     | `false`                  |
-| `marquez.db.host`          | PostgreSQL host                  | `nil`                    |
-| `marquez.db.port`          | PostgreSQL port                  | `5432`                   |
-| `marquez.db.name`          | PostgreSQL database              | `marquez`                |
-| `marquez.db.user`          | PostgreSQL user                  | `buendia`                |
-| `marquez.db.password`      | PostgreSQL password              | `macondo `               |
+| Parameter                  | Description                      | Default        |
+|----------------------------|----------------------------------|----------------|
+| `marquez.image.repository` | Marquez image                    | `marquez`      |
+| `marquez.image.tag`        | Marquez image tag                | `0.10.0`       |
+| `marquez.image.pullPolicy` | Image pull policy                | `IfNotPresent` |
+| `marquez.db.enabled`       | Create a PostgreSQL database     | `false`        |
+| `marquez.db.host`          | PostgreSQL host                  | `nil`          |
+| `marquez.db.port`          | PostgreSQL port                  | `5432`         |
+| `marquez.db.name`          | PostgreSQL database              | `marquez`      |
+| `marquez.db.user`          | PostgreSQL user                  | `buendia`      |
+| `marquez.db.password`      | PostgreSQL password              | `macondo `     |
 
 ### [Marquez Web UI](https://github.com/MarquezProject/marquez-web) **parameters**
 
-| Parameter              | Description                   | Default                      |
-|------------------------|-------------------------------|------------------------------|
-| `web.image.registry`   | Marquez Web UI image registry | `docker.io`                  |
-| `web.image.repository` | Marquez Web UI image          | `marquezproject/marquez-web` |
-| `web.image.tag`        | Marquez Web UI image tag      | `0.3.0`                      |
-| `web.image.pullPolicy` | Image pull policy             | `IfNotPresent`               |
+| Parameter              | Description                   | Default        |
+|------------------------|-------------------------------|----------------|
+| `web.image.repository` | Marquez Web UI image          | `marquez-web`  |
+| `web.image.tag`        | Marquez Web UI image tag      | `0.3.0`.       |
+| `web.image.pullPolicy` | Image pull policy             | `IfNotPresent` |
 
 ## Contributing
 
