@@ -16,17 +16,17 @@ $ helm install marquez .
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install --name my-release .
+$ helm install marquez .
 ```
 
 > **Note:** For a list of parameters that can be overridden during installation, see the [configuration](#configuration) section.
 
 ## Uninstalling the Chart
 
-To uninstall the `my-release` deployment:
+To uninstall the `marquez ` deployment:
 
 ```bash
-$ helm delete my-release
+$ helm delete marquez
 ```
 
 ## Configuration
