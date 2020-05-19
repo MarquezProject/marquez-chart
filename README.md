@@ -8,7 +8,7 @@ Helm Chart for [Marquez](https://github.com/MarquezProject/marquez).
 ## TL;DR;
 
 ```bash
-$ helm install .
+$ helm install marquez .
 ```
 
 ## Installing the Chart
