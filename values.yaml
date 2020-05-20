@@ -2,7 +2,7 @@ marquez:
   replicaCount: 1
   image:
     repository: marquezproject/marquez
-    tag: latest
+    tag: 0.10.0
     pullPolicy: IfNotPresent
   db:
 
@@ -37,3 +37,22 @@ resources: {}
 nodeSelector: {}
 tolerations: []
 affinity: {}
+
+config:
+  server:
+    applicationConnectors:
+    - type: http
+      port: ${MARQUEZ_PORT:-8080}
+    adminConnectors:
+    - type: http
+      port: ${MARQUEZ_ADMIN_PORT:-8081}
+  db:
+    driverClass: org.postgresql.Driver
+    url: jdbc:postgresql://${POSTGRES_HOST:-localhost}:${POSTGRES_PORT:-5432}/${POSTGRES_DB}
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  migrateOnStartup: ${MIGRATE_ON_STARTUP:-true}
+  logging:
+    level: ${LOG_LEVEL:-INFO}
+    appenders:
+      - type: console

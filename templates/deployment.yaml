@@ -21,8 +21,12 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.marquez.image.repository }}:{{ .Values.marquez.image.tag }}"
+          imagePullPolicy: {{ .Values.marquez.image.pullPolicy }}
+          volumeMounts:
+            - name: marquez-volume
+              mountPath: /usr/src/app/config.yml
+              subPath: config.yml
           ports:
             - name: http
               containerPort: 80
@@ -35,6 +39,9 @@ spec:
             httpGet:
               path: /
               port: http
+          env:
+            - name: MARQUEZ_CONFIG
+              value: "/usr/src/app/config.yml"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -49,3 +56,7 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
+      volumes:
+      - name: marquez-volume
+        configMap:
+          name: marquez-config
