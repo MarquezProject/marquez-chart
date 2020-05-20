@@ -3,7 +3,7 @@ marquez:
   image:
     repository: marquezproject/marquez
     tag: latest
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
   db:
 
 web:
@@ -11,7 +11,7 @@ web:
   image:
     repository: marquezproject/marquez-web
     tag: latest
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
 
 nameOverride: ""
 fullnameOverride: ""

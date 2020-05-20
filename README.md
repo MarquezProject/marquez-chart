@@ -33,18 +33,18 @@ $ helm delete marquez
 
 ### [Marquez](https://github.com/MarquezProject/marquez) **parameters**
 
-| Parameter                  | Description                      | Default        |
-|----------------------------|----------------------------------|----------------|
-| `marquez.image.repository` | Marquez image                    | `marquez`      |
-| `marquez.image.tag`        | Marquez image tag                | `0.10.0`       |
-| `marquez.image.pullPolicy` | Image pull policy                | `IfNotPresent` |
-| `marquez.replicaCount`     | Number of desired replicas       | `1`            |
-| `marquez.db.enabled`       | Create a PostgreSQL database     | `false`        |
-| `marquez.db.host`          | PostgreSQL host                  | `nil`          |
-| `marquez.db.port`          | PostgreSQL port                  | `5432`         |
-| `marquez.db.name`          | PostgreSQL database              | `marquez`      |
-| `marquez.db.user`          | PostgreSQL user                  | `buendia`      |
-| `marquez.db.password`      | PostgreSQL password              | `macondo `     |
+| Parameter                  | Description                      | Default                  |
+|----------------------------|----------------------------------|--------------------------|
+| `marquez.image.repository` | Marquez image                    | `marquezproject/marquez` |
+| `marquez.image.tag`        | Marquez image tag                | `0.10.4`                 |
+| `marquez.image.pullPolicy` | Image pull policy                | `IfNotPresent`           |
+| `marquez.replicaCount`     | Number of desired replicas       | `1`                      |
+| `marquez.db.enabled`       | Create a PostgreSQL database     | `false`                  |
+| `marquez.db.host`          | PostgreSQL host                  | `nil`                    |
+| `marquez.db.port`          | PostgreSQL port                  | `5432`                   |
+| `marquez.db.name`          | PostgreSQL database              | `marquez`                |
+| `marquez.db.user`          | PostgreSQL user                  | `buendia`                |
+| `marquez.db.password`      | PostgreSQL password              | `macondo `               |
 
 ### [Marquez Web UI](https://github.com/MarquezProject/marquez-web) **parameters**
 
