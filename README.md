@@ -39,7 +39,6 @@ $ helm delete marquez
 | `marquez.image.tag`        | Marquez image tag                | `0.10.4`                 |
 | `marquez.image.pullPolicy` | Image pull policy                | `IfNotPresent`           |
 | `marquez.replicaCount`     | Number of desired replicas       | `1`                      |
-| `marquez.db.enabled`       | Create a PostgreSQL database     | `false`                  |
 | `marquez.db.host`          | PostgreSQL host                  | `nil`                    |
 | `marquez.db.port`          | PostgreSQL port                  | `5432`                   |
 | `marquez.db.name`          | PostgreSQL database              | `marquez`                |
