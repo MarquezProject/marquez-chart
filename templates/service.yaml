@@ -14,6 +14,7 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+ 
   selector:
     app.kubernetes.io/name: {{ include "marquez.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

@@ -29,21 +29,44 @@ spec:
               subPath: config.yml
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 5000 
+              protocol: TCP
+            - name: http-admin
+              containerPort: 5001
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
-              port: http
+              path: /healthcheck
+              port: http-admin
           readinessProbe:
             httpGet:
-              path: /
-              port: http
+              path: /healthcheck
+              port: http-admin
           env:
+            - name: MARQUEZ_PORT
+              value: {{ .Values.marquez.port | quote }}
+            - name: MARQUEZ_ADMIN_PORT
+              value: {{ .Values.marquez.adminPort | quote }}
             - name: MARQUEZ_CONFIG
-              value: "/usr/src/app/config.yml"
+              value: /usr/src/app/config.yml
+            - name: POSTGRES_HOST
+              value: {{ .Values.marquez.db.host | quote }}
+            - name: POSTGRES_PORT
+              value: {{ .Values.marquez.db.port | quote }}
+            - name: POSTGRES_DB
+              value: {{ .Values.marquez.db.name }}
+            - name: POSTGRES_USER
+              value: {{ .Values.marquez.db.user }}
+            - name: POSTGRES_PASSWORD
+              value: {{ .Values.marquez.db.password }}
+            - name: MIGRATE_ON_STARTUP
+              value: {{ .Values.marquez.migrateOnStartup | quote }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: marquez-volume
+          configMap:
+            name: marquez-config
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -56,7 +79,4 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-      volumes:
-      - name: marquez-volume
-        configMap:
-          name: marquez-config
+   
